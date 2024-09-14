@@ -1,11 +1,13 @@
 import "@/styles/globals.css"
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
 import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 import { cn } from "@/lib/utils";
 
 const poppins = Poppins({ weight: "500", subsets: ["latin"] });
+const jetbrains = JetBrains_Mono({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,9 +19,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn(
-        poppins.className,
+        jetbrains.className,
         'bg-white dark:bg-[#121212] antialiased',
-        'w-full mx-auto container lg:max-w-[110rem] pt-3 min-h-screen flex flex-col')}>
+        'w-full mx-auto container lg:max-w-[110rem] min-h-screen flex flex-col')}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -31,7 +33,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <main className="flex flex-1 my-10">
             {children}
           </main>
-          {/* <Footer /> */}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

@@ -18,7 +18,7 @@ const Header = () => {
         },
         {
             content: "Github",
-            url: "https://github.com/himel-studio/himel.studio"
+            url: "https://git.new/himel-studio"
         },
         {
             content: "X_Twitter",
@@ -27,10 +27,10 @@ const Header = () => {
     ]
 
     return (
-        <header className="flex flex-wrap gap-x-[1px] pt-1">
+        <header className="flex flex-wrap gap-x-[1px] pt-4">
             <nav className="flex flex-row gap-x-[1px] cursor-pointer">
                 {ROUTES.map((route, index) => (
-                    <Link key={index} href={route.url} className="bg-[#1e1e1e]/10 hover:bg-orange-300/30 dark:bg-black/30 dark:hover:bg-orange-300/10 backdrop-blur-sm p-[5px_8px] rounded-[2px] flex items-center justify-center uppercase tracking-[-.3px] text-xs ">
+                    <Link key={index} href={route.url} className="bg-[#1e1e1e]/10 hover:bg-orange-300/30 dark:bg-black/30 dark:hover:bg-orange-300/10 backdrop-blur-sm p-[5px_8px] rounded-[2px] flex items-center justify-center uppercase tracking-[-.3px] text-xs h-7">
                         {route.content}
                     </Link>
                 ))}
@@ -38,7 +38,7 @@ const Header = () => {
 
                 <Dialog>
                     <DialogTrigger
-                        className="bg-[#1e1e1e]/10 hover:bg-orange-300/30 dark:bg-black/30 dark:hover:bg-orange-300/10 backdrop-blur-sm p-[5px_8px] rounded-[2px] items-center justify-center uppercase tracking-[-.3px] text-xs "
+                        className="bg-[#1e1e1e]/10 hover:bg-orange-300/30 dark:bg-black/30 dark:hover:bg-orange-300/10 backdrop-blur-sm p-[5px_8px] rounded-[2px] items-center justify-center uppercase tracking-[-.3px] text-xs h-7"
                         asChild
                     >
                         <span>Get_updates</span>

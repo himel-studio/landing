@@ -1,7 +1,7 @@
 "use client";
 
-import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { ModeToggle } from "./mode-toggle"
+import GetUpdates from "../get-uptades";
 import Link from "next/link";
 
 
@@ -23,6 +23,10 @@ const Header = () => {
         {
             content: "X_Twitter",
             url: "/"
+        },
+        {
+            content: "Not_found",
+            url: "/404"
         }
     ]
 
@@ -34,28 +38,9 @@ const Header = () => {
                         {route.content}
                     </Link>
                 ))}
-
-
-                <Dialog>
-                    <DialogTrigger
-                        className="bg-[#1e1e1e]/10 hover:bg-orange-300/30 dark:bg-black/30 dark:hover:bg-orange-300/10 backdrop-blur-sm p-[5px_8px] rounded-[2px] items-center justify-center uppercase tracking-[-.3px] text-xs h-7"
-                        asChild
-                    >
-                        <span>Get_updates</span>
-                    </DialogTrigger>
-                    <DialogContent className=" border-0 rounded-none">
-                        <DialogHeader>
-                            <DialogTitle>Stay updated</DialogTitle>
-                            <DialogDescription>
-                                Subscribe to our newsletter to get the latest news and
-                                updates.
-                            </DialogDescription>
-                        </DialogHeader>
-                    </DialogContent>
-                </Dialog>
             </nav>
-
-
+            
+            <GetUpdates />
             <ModeToggle />
 
         </header>

@@ -1,14 +1,16 @@
 "use client";
 
 import React, { useEffect, useState, useCallback } from "react";
+import { cn } from "@/lib/utils";
 
 const lettersAndSymbols = "abcdefghijklmnopqrstuvwxyz!@#$%^&*-_+=;:<>,1234567890";
 
 interface AnimatedTextProps {
     text: string;
+    className?: string;
 }
 
-export function AnimatedText({ text }: AnimatedTextProps) {
+export default function AnimatedText({ text, className }: AnimatedTextProps) {
     const [animatedText, setAnimatedText] = useState("");
 
     const getRandomChar = useCallback(
@@ -54,5 +56,5 @@ export function AnimatedText({ text }: AnimatedTextProps) {
         animateText();
     }, [text, animateText]);
 
-    return <div className="relative inline-block">{animatedText}</div>;
+    return <span className={cn("relative inline-block", className)}>{animatedText}</span>;
 }

@@ -1,13 +1,8 @@
-import { AnimatedText } from "@/components/ui/animated-text"
-
-import React from 'react'
-
+import Welcome from "@/components/welcome"
 const page = () => {
   return (
     <div className="flex flex-col flex-1">
-      <section>
-        <AnimatedText text="Hello World!" />
-      </section>
+      <Welcome />
     </div>
 
   )

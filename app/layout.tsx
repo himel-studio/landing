@@ -1,6 +1,6 @@
 import "@/styles/globals.css"
 import type { Metadata } from "next";
-import { Poppins, JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/providers/theme-provider";
 import Header from "@/components/layout/header";
 import Background from "@/components/layout/background";

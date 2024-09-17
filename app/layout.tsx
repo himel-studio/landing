@@ -11,7 +11,7 @@ const jetbrains = JetBrains_Mono({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Himel Studio",
-  description: "Himel Studio is a personal blog and portfolio website of Himel Rana. Himel is a full-stack web developer and a tech enthusiast.",
+  description: "Himel Studio is a personal blog and portfolio website of Himel. Himel is a full-stack web developer and a tech enthusiast.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

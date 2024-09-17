@@ -1,10 +1,9 @@
-import Welcome from "@/components/welcome"
+import Hero from "@/components/hero"
 const page = () => {
   return (
     <div className="flex flex-col flex-1">
-      <Welcome />
+      <Hero />
     </div>
-
   )
 }
 

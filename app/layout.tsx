@@ -18,15 +18,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(
-        jetbrains.className, 'bg-white dark:bg-[#121212] antialiased',
-        'w-full mx-auto container lg:max-w-[110rem] min-h-screen flex flex-col')}>
+      <body className={cn(jetbrains.className, 'antialiased', 'w-full mx-auto container lg:max-w-[110rem] min-h-screen flex flex-col')}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          <Background />
           <Header />
           <main className="flex flex-1 my-10">
             {children}

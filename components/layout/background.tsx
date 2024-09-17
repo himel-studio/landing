@@ -2,7 +2,7 @@
 
 const Background = () => {
   return (
-    <div className="bg-white dark:bg-[#121212] noise  absolute"></div>
+    <div className="bg-white dark:bg-[#aa3f3f] noise  absolute"></div>
   )
 }
 

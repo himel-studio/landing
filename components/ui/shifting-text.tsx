@@ -3,7 +3,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { cn } from "@/lib/utils";
 
-const lettersAndSymbols = "abcdefghijklmnopqrstuvwxyz!@#$%^&*-_+=;:<>,1234567890";
+const lettersAndSymbols = "abcdefghijklmnopqrstuvwxyzñ!@#$%^&*-_+=;:<>,1234567890";
 
 interface AnimatedTextProps {
     text: string;
